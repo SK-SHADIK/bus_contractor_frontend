@@ -55,7 +55,10 @@ const TransactionHistory=()=>{
                     </div> 
                     <div class="main">
                         <h3>Transaction History</h3>
-                        <div class="btn"><CSVLink data={trans} filename="Transaction History">EXPORT LIST</CSVLink></div>
+
+                        <div class="btns"><CSVLink data={trans} filename="Transection List">EXPORT List</CSVLink></div>
+       
+
                         <a href={"/CreateTran"} class="btns">Create A Transaction</a>
                         <table>
                             <tr>
