@@ -6,6 +6,7 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
 
+
 const ChangeInformation=()=>{
     document.title = "Edit Profile";
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ const ChangeInformation=()=>{
     const {id} = useParams();
 
     useEffect(()=>{
-        axios.get(`http://127.0.0.1:8000/api/Profile/${id}`).then((res)=>{
+        axios.get(`http://127.0.0.1:8000/api/Profile/${localStorage.getItem("c_id")}`).then((res)=>{
             setInputs({
                 c_id:res.data.c_id,
                 c_name:res.data.c_name,
@@ -47,7 +48,7 @@ const ChangeInformation=()=>{
                 console.log(rsp.data)
                     
                 navigate('/Profile');          
-                thisClicked.innerText = "Update";
+                thisClicked.innerText = "Updating";
             }
         )};
                   

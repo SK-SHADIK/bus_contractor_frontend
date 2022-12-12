@@ -33,8 +33,11 @@ const UpdateTransaction=(props)=> {
         const thisClicked = e.currentTarget;
         thisClicked.innerText = "Updating";
         console.log(inputs);
-        axios.post(`http://localhost:8000/api/UpdateTransaction`, inputs).then((rsp)=>{
+        axios.post(`http://localhost:8000/api/UpdateTransaction`, inputs)
+        .then((rsp)=>{
+            console.log(rsp);
             navigate('/TransactionHistory');
+            thisClicked.innerText = "Updating";
         });
     }
     

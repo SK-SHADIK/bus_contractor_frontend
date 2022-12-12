@@ -14,7 +14,7 @@ const Topbar=()=>{
                         </div>
                         <div class="user">
                             <a href={"/Profile"} class="btn">PROFILE</a>
-                            <a href="#" class="btn">Log Out</a>
+                            <a href={"/Login"} class="btn">Log Out</a>
                         </div>
                     </div>
                 </div>

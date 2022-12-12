@@ -3,6 +3,7 @@ import Leftbar from "./Bars/Leftbar";
 import Topbar from "./Bars/Topbar";
 import {useState, useEffect} from 'react';
 import axios from "axios";
+import { CSVLink } from "react-csv";
 
 const TransactionHistory=()=>{
     const [trans,setTrans] = useState([]);
@@ -54,6 +55,7 @@ const TransactionHistory=()=>{
                     </div> 
                     <div class="main">
                         <h3>Transaction History</h3>
+                        <div class="btn"><CSVLink data={trans} filename="Transaction History">EXPORT LIST</CSVLink></div>
                         <a href={"/CreateTran"} class="btns">Create A Transaction</a>
                         <table>
                             <tr>

@@ -8,7 +8,7 @@ const Profile=()=>{
     document.title = "Profile";
     const [profile ,setProfile] = useState({});
     useEffect(()=>{
-        axios.get(`/Profile/${localStorage.getItem("t_id")}`).then((res)=>{
+        axios.get(`http://127.0.0.1:8000/api/Profile/${localStorage.getItem("c_id")}`).then((res)=>{
             setProfile(res.data);
         });
     },[]);
