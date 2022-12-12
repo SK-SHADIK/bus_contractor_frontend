@@ -27,6 +27,8 @@ h3 {
 }
 
 .btn {
+    width: 200px;
+    margin-right: 10px;
     background: skyblue;
     color: white;
     padding: 5px 10px;
